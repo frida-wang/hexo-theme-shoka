@@ -7,6 +7,10 @@
       <i class="ic i-{{ theme.footer.icon.name }}"></i>
     </span>
     <span class="author" itemprop="copyrightHolder">{{ author }} @ {{ alternate if alternate else title}}</span>
+    {%- if theme.footer.beian %}
+    <span class="post-meta-divider">|</span>
+    备案：<a href="https://beian.miit.gov.cn">{{theme.footer.beian}}</a>
+    {%- endif %}
   </div>
 
   {%- if theme.footer.count %}
@@ -26,7 +30,7 @@
 
   {%- if theme.footer.powered %}
   <div class="powered-by">
-    {{ __('footer.powered', _url('https://hexo.io', 'Hexo') + ' & Theme.' + _url('https://github.com/amehime/hexo-theme-shoka', 'Shoka')) }}
+    {{ __('footer.powered', _url('https://hexo.io', 'Hexo') + ' & Theme.' + _url('https://github.com/frida-wang/hexo-theme-shoka', 'Shoka') + ' Forked from ' + _url('https://github.com/amehime/hexo-theme-shoka', 'Shoka')) }}
   </div>
   {%- endif %}
 </div>
